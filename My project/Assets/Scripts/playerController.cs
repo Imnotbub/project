@@ -1,9 +1,13 @@
+using System.Numerics;
 using UnityEngine;
+using Vector3 = UnityEngine.Vector3;
+using Quaternion = UnityEngine.Quaternion;
 
 public class playerController : MonoBehaviour
 {
     
     public CharacterController CharacterController;
+    public Transform cam;
    public float speed = 6f;
 
    public float turnSmoothTime = 0.01f;
@@ -11,7 +15,8 @@ public class playerController : MonoBehaviour
    
    void Start()
     {
-        
+       Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false; 
     }
    
    
@@ -24,11 +29,12 @@ public class playerController : MonoBehaviour
 
      if (direction.magnitude >= 0.1f){
 
-      float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
+      float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
       float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
       transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
-      CharacterController.Move(direction * speed * Time.deltaTime);
+      Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+      CharacterController.Move(moveDir.normalized * speed * Time.deltaTime);
 
      }
 
