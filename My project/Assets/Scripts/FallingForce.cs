@@ -10,6 +10,7 @@ public class FallingForce : MonoBehaviour
    public Transform Controller;
    public float JumpForce = 10f;
    public float Gravity = 9.8f;
+   public bool isGrounded;
    
    
    
@@ -19,11 +20,23 @@ public class FallingForce : MonoBehaviour
         
     }
 
+    // Detects if player is touching the ground
+    void OnCollisionEnter(Collision collision)
+    {
+       
+    }
+    void OnCollisionExit(Collision collision)
+    {
+        
+    }
+    
+    
+    
     // Update is called once per frame
     void Update()
     {
-        if()
-
+        
+        
         
         if (CharacterController.isGrounded == false)
         {

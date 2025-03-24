@@ -8,7 +8,7 @@ public class playerController : MonoBehaviour
     
     public CharacterController CharacterController;
     public Transform cam;
-   public float speed = 6f;
+   public float speed = 3f;
 
    public float turnSmoothTime = 0.01f;
    float turnSmoothVelocity;
@@ -40,12 +40,16 @@ public class playerController : MonoBehaviour
 
       if (Input.GetKeyDown(KeyCode.LeftShift))
       {
-          speed = 12f;
+          speed = 5f;
           
       }
       else if (Input.GetKeyUp(KeyCode.LeftShift))
       {
-          speed = 6f;
+          speed = 3f;
       }
+
+        Vector3 TurretDirection = new Vector3(Input.GetAxis("Mouse X"), 0f, Input.GetAxis("Mouse Y"));
+        transform.Rotate(Vector3.up * TurretDirection.x * 100 * Time.deltaTime);
+
     }
 }
