@@ -17,6 +17,8 @@ public class playerController : MonoBehaviour
     public float speed = 3f;
     public float turnSmoothTime = 0.1f;
    float turnSmoothVelocity;
+   
+   public float MouseSensitivity = 50f;
     
 
     
