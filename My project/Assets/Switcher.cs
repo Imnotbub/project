@@ -1,3 +1,4 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -26,13 +27,13 @@ public class Switcher : MonoBehaviour
         {
             Scope.SetActive(true);
             MainCamera.SetActive(false);
-            Debug.Log("Scope Active");
+            Console.WriteLine("Scope Active");
         }
         if(Input.GetKeyUp(KeyCode.Mouse1))
         {
             Scope.SetActive(false);
             MainCamera.SetActive(true);
-            Debug.Log("Scope Inactive");
+            Console.WriteLine("Scope Inactive");
         }
         if(Scope.activeSelf)
         {
