@@ -296,7 +296,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a2f2cb2db6a75fc43856583d851a6313, type: 2}
+  - {fileID: 2100000, guid: 32881268a0ad7b141bac5917e812d563, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -396,7 +396,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 3
   m_Height: 3.6
-  m_Radius: 2
+  m_Radius: 1.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -1537,7 +1537,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1575241691}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13308512, y: 0.002912186, z: -0.00039104884, w: 0.99110025}
+  m_LocalRotation: {x: 0.13307872, y: 0.010146103, z: -0.0013624205, w: 0.9910526}
   m_LocalPosition: {x: 3.7912538, y: 4.8456545, z: -40.46717}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1576,7 +1576,7 @@ MonoBehaviour:
         DecelTime: 0.2
     - Name: Look Orbit Y
       Owner: {fileID: 1575241699}
-      Enabled: 0
+      Enabled: 1
       Input:
         InputAction: {fileID: -5630151704836100654, guid: 1d6e640e716dc4ff6989b73d02023f2b, type: 3}
         Gain: -1
@@ -1996,7 +1996,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1705933084}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13308512, y: 0.0029121859, z: -0.0003910489, w: 0.9911003}
+  m_LocalRotation: {x: 0.13307874, y: 0.010146105, z: -0.0013624209, w: 0.9910526}
   m_LocalPosition: {x: 3.7912538, y: 4.8456545, z: -40.46717}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2328,6 +2328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1876512499}
   - component: {fileID: 1876512501}
+  - component: {fileID: 1876512502}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -2366,6 +2367,22 @@ MonoBehaviour:
   cam: {fileID: 1575241692}
   HorizontalAxis: {fileID: 0}
   VerticalAxis: {fileID: 0}
+--- !u!114 &1876512502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876512498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63e20e2054488a14fa4f8a97177477ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  riseKey: 114
+  lowerKey: 102
+  BarrelMoveSpeed: 25
+  Barrel: {fileID: 1584791170}
 --- !u!1 &2119189123
 GameObject:
   m_ObjectHideFlags: 0

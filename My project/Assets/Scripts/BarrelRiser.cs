@@ -6,24 +6,21 @@ public class BarrelRiser : MonoBehaviour
 {
     public KeyCode riseKey = KeyCode.R;
     public KeyCode lowerKey = KeyCode.F;
-    public float BarrelMoveSpeed = 5f;
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public float BarrelMoveSpeed = 25f;
+    public Transform Barrel;
 
     // Update is called once per frame
     void Update()
     {
+        Mathf.Clamp(Barrel.transform.rotation.x, -25, 45);
+        
         if (Input.GetKey(riseKey))
         {
-            transform.rotation = Quaternion.Euler(BarrelMoveSpeed * Time.deltaTime, 0f, 0f);
+            Barrel.transform.Rotate(Vector3.forward * BarrelMoveSpeed * Time.deltaTime);
         }
         if (Input.GetKey(lowerKey))
         {
-            transform.rotation = Quaternion.Euler(-BarrelMoveSpeed * Time.deltaTime, 0f, 0f);
+            Barrel.transform.Rotate(Vector3.back * BarrelMoveSpeed * Time.deltaTime);
         }
     }
 }
