@@ -247,7 +247,7 @@ GameObject:
   - component: {fileID: 206318852}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: PhysicalObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -689,6 +689,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Untitled
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 23946815b0608274d82a17c6e194a976, type: 3}
+      propertyPath: m_TagString
+      value: PhysicalObject
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -8700617353114198275, guid: 23946815b0608274d82a17c6e194a976, type: 3}
@@ -837,7 +841,7 @@ GameObject:
   - component: {fileID: 841163378}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: PhysicalObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -950,7 +954,7 @@ GameObject:
   - component: {fileID: 979811924}
   m_Layer: 0
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: PhysicalObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1060,7 +1064,7 @@ GameObject:
   - component: {fileID: 1085615130}
   m_Layer: 0
   m_Name: Table
-  m_TagString: Untagged
+  m_TagString: PhysicalObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1297,7 +1301,7 @@ GameObject:
   - component: {fileID: 1406830038}
   m_Layer: 0
   m_Name: Cylinder (1)
-  m_TagString: Untagged
+  m_TagString: PhysicalObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1407,7 +1411,7 @@ GameObject:
   - component: {fileID: 1494211249}
   m_Layer: 0
   m_Name: Cylinder (2)
-  m_TagString: Untagged
+  m_TagString: PhysicalObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1573,7 +1577,7 @@ MonoBehaviour:
         DecelTime: 0.2
     - Name: Look Orbit Y
       Owner: {fileID: 1575241699}
-      Enabled: 1
+      Enabled: 0
       Input:
         InputAction: {fileID: -5630151704836100654, guid: 1d6e640e716dc4ff6989b73d02023f2b, type: 3}
         Gain: -1
@@ -1883,7 +1887,7 @@ GameObject:
   - component: {fileID: 1600798023}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: PhysicalObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2161,7 +2165,7 @@ GameObject:
   - component: {fileID: 1800679624}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: PhysicalObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2405,7 +2409,7 @@ GameObject:
   - component: {fileID: 2119189124}
   m_Layer: 0
   m_Name: Cylinder (3)
-  m_TagString: Untagged
+  m_TagString: PhysicalObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
