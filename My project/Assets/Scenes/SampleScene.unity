@@ -1522,7 +1522,6 @@ GameObject:
   - component: {fileID: 1575241694}
   - component: {fileID: 1575241693}
   - component: {fileID: 1575241698}
-  - component: {fileID: 1575241700}
   m_Layer: 0
   m_Name: FreeLook Camera
   m_TagString: Untagged
@@ -1784,18 +1783,6 @@ MonoBehaviour:
       Wait: 1
       Time: 2
     Restrictions: 0
---- !u!114 &1575241700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1575241691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f42da96ca32490f4d9ad78582e782b37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1584262667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2341,7 +2328,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1876512499}
   - component: {fileID: 1876512501}
-  - component: {fileID: 1876512502}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -2375,21 +2361,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 41b8f886d6badad40832657e2ca5e006, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 1575241692}
-  HorizontalAxis: {fileID: 0}
-  VerticalAxis: {fileID: 0}
---- !u!114 &1876512502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1876512498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bc311f0f78503241837b4b84c2fc8c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1575241692}
