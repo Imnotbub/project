@@ -38,10 +38,5 @@ public class Shooting : MonoBehaviour
         rb.linearVelocity = velocity;
     }
 
-    void OnCollisionEnter(Collision collision){
-        if(collision.gameObject.tag == "PhysicalObject"){
-            Destroy(gameObject);
-            Debug.Log("Object Hit");
-        }
-    }
+    
 }

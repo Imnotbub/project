@@ -703,13 +703,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 131742100}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 953e7ef3cfb20924b8c9256e49bac6e2, type: 3}
+  m_Script: {fileID: 11500000, guid: a921dc59b8d0beb448f86ce0849da40c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShotPoint: {fileID: 131742101}
-  Fire: {fileID: 0}
-  Hitpoint: {fileID: 5836762912367451001, guid: 8fff669c33504ed4482065d67bd7affb, type: 3}
-  crosshair: {fileID: 5836762912367451001, guid: 8fff669c33504ed4482065d67bd7affb, type: 3}
+  launchSpeed: 75
+  objectPrefab: {fileID: 3137951421362732027, guid: 74fa8483dbeacb04ab68cc5ad8b06fe6, type: 3}
 --- !u!1 &206318851
 GameObject:
   m_ObjectHideFlags: 0
@@ -829,7 +827,7 @@ GameObject:
   - component: {fileID: 237445134}
   - component: {fileID: 237445133}
   m_Layer: 7
-  m_Name: GameObject
+  m_Name: NavMeshSurface
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -941,7 +939,7 @@ MonoBehaviour:
   health: 120
   projectileSpawn: {fileID: 1644762394}
   walkPoint: {x: 0, y: 0, z: 0}
-  walkPointRange: 5
+  walkPointRange: 15
   timeBetweenAttacks: 2
   Projectile: {fileID: 3137951421362732027, guid: 74fa8483dbeacb04ab68cc5ad8b06fe6, type: 3}
   sightRange: 35
@@ -1340,6 +1338,20 @@ MonoBehaviour:
   JumpForce: 10
   Gravity: 9.8
   isGrounded: 0
+--- !u!114 &352968909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352968903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0d31b81e36c75e4687a21f606b0b476, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 150
+  Bullet: {fileID: 3137951421362732027, guid: 74fa8483dbeacb04ab68cc5ad8b06fe6, type: 3}
 --- !u!1 &364758027 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 23946815b0608274d82a17c6e194a976, type: 3}
@@ -4428,7 +4440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Scope: {fileID: 1803774558}
-  MainCamera: {fileID: 1575241691}
+  MainCamera: {fileID: 1705933084}
 --- !u!1001 &1744192012
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4793,6 +4805,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 382d554d965279447a6a8e4b0e1ca077, type: 3}
       insertIndex: -1
       addedObject: {fileID: 352968908}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 382d554d965279447a6a8e4b0e1ca077, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 352968909}
     - targetCorrespondingSourceObject: {fileID: -7939936681367242364, guid: 382d554d965279447a6a8e4b0e1ca077, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1034858627}

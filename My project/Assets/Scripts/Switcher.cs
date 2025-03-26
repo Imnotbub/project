@@ -19,33 +19,26 @@ public class Switcher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float MouseX = Input.GetAxis("Mouse X");
-        
-        
-        CameraPosition = new Vector3(MainCamera.transform.position.x, MainCamera.transform.position.y, MainCamera.transform.position.z);
-       
-        //Switches to ScopeCam when right mouse button is pressed
-        if(Input.GetKeyDown(KeyCode.Mouse1))
+        float mouseX = Input.GetAxisRaw("mouseX");
+
+        if (Input.GetButtonDown("MouseButton1"))
         {
             Scope.SetActive(true);
-            MainCamera.SetActive(false);
-            
+            MainCamera.transform.position = Scope.transform.position;
+            MainCamera.transform.rotation = Scope.transform.rotation;
+            Debug.Log("Scope is active");
         }
-        
-        //Switches back to MainCam when right mouse button is released
-        if(Input.GetKeyUp(KeyCode.Mouse1))
+        else if (Input.GetButtonUp("MouseButton1"))
         {
             Scope.SetActive(false);
-            MainCamera.SetActive(true);
-            
+            MainCamera.transform.position = Scope.transform.position;
+            MainCamera.transform.rotation = Scope.transform.rotation;
+            Debug.Log("Scope is Inactive");
         }
+         
         
-        //Gives the ScopeCam rotation ability
-        if(Scope.activeSelf)
-        {
-            MainCamera.transform.position = new Vector3(Scope.transform.position.x, Scope.transform.position.y, Scope.transform.position.z);
-            MainCamera.transform.Rotate(0, MouseX, 0);
-        }
+
+       
             
 
         
