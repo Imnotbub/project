@@ -4,12 +4,15 @@ using System.Runtime.CompilerServices;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 using Vector3 = UnityEngine.Vector3;
 
 public class Switcher : MonoBehaviour
 {
     public GameObject Camera_2;
     public GameObject Camera_1;
+
+    public GameObject RotationRod;
     
     
     
@@ -26,8 +29,10 @@ public class Switcher : MonoBehaviour
         float MouseX = Input.GetAxis("Mouse X");
 
         if (Camera_2.activeSelf){
-            Camera_2.transform.Rotate(0f, MouseX, 0f);
+            Camera_1.transform.position = new Vector3(Camera_2.transform.position.x, Camera_2.transform.position.y, Camera_2.transform.position.z);
+            Camera_1.transform.Rotate(0, MouseX, 0);
         }
+
         
         
         

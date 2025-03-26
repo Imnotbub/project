@@ -9,7 +9,12 @@ using Quaternion = UnityEngine.Quaternion;
 public class Shooting : MonoBehaviour
 {
     public float launchSpeed = 75.0f;
+
+    public float FireDelay = 2f;
     public GameObject objectPrefab;
+    bool alreadyShot;
+
+
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,7 +26,11 @@ public class Shooting : MonoBehaviour
     void Update()
     {
       if(Input.GetMouseButton(0)) {
-        SpawnObject();
+        if(alreadyShot == false)
+        {
+          SpawnObject();
+        }
+        
       } 
     }
 
@@ -36,7 +45,12 @@ public class Shooting : MonoBehaviour
 
         Rigidbody rb = newObject.GetComponent<Rigidbody>();
         rb.linearVelocity = velocity;
+        alreadyShot = true;
+         Invoke(nameof(ShotDelay), FireDelay);
     }
 
+    void ShotDelay(){
+      alreadyShot = false;
+    }
     
 }
