@@ -23,18 +23,24 @@ public class Switcher : MonoBehaviour
         
         
         CameraPosition = new Vector3(MainCamera.transform.position.x, MainCamera.transform.position.y, MainCamera.transform.position.z);
+       
+        //Switches to ScopeCam when right mouse button is pressed
         if(Input.GetKeyDown(KeyCode.Mouse1))
         {
             Scope.SetActive(true);
             MainCamera.SetActive(false);
-            Console.WriteLine("Scope Active");
+            
         }
+        
+        //Switches back to MainCam when right mouse button is released
         if(Input.GetKeyUp(KeyCode.Mouse1))
         {
             Scope.SetActive(false);
             MainCamera.SetActive(true);
-            Console.WriteLine("Scope Inactive");
+            
         }
+        
+        //Gives the ScopeCam rotation ability
         if(Scope.activeSelf)
         {
             MainCamera.transform.position = new Vector3(Scope.transform.position.x, Scope.transform.position.y, Scope.transform.position.z);
