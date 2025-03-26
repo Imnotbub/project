@@ -1,49 +1,53 @@
 using System;
+using System.Numerics;
+using System.Runtime.CompilerServices;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using Vector3 = UnityEngine.Vector3;
 
 public class Switcher : MonoBehaviour
 {
-    public GameObject Scope;
-    public GameObject MainCamera;
-    Vector3 CameraPosition;
-    Vector3 ScopePosition;
+    public GameObject Camera_2;
+    public GameObject Camera_1;
+    
     
     
 
     void Start()
     {
-        Scope.SetActive(false);
+        Camera_1.SetActive(true);
+        Camera_2.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        float mouseX = Input.GetAxisRaw("mouseX");
+        float MouseX = Input.GetAxis("Mouse X");
 
-        if (Input.GetButtonDown("MouseButton1"))
-        {
-            Scope.SetActive(true);
-            MainCamera.transform.position = Scope.transform.position;
-            MainCamera.transform.rotation = Scope.transform.rotation;
-            Debug.Log("Scope is active");
+        if (Camera_2.activeSelf){
+            Camera_2.transform.Rotate(0f, MouseX, 0f);
         }
-        else if (Input.GetButtonUp("MouseButton1"))
-        {
-            Scope.SetActive(false);
-            MainCamera.transform.position = Scope.transform.position;
-            MainCamera.transform.rotation = Scope.transform.rotation;
-            Debug.Log("Scope is Inactive");
+        
+        
+        
+        if(Input.GetMouseButtonDown(1)){
+            Cam_2();
         }
+        if(Input.GetMouseButtonUp(1)){
+           Cam_1();
+        }   
+        void Cam_1(){
+        Camera_1.SetActive(true);
+        Camera_2.SetActive(false);
+    }
+       void Cam_2()
+       {
+        Camera_1.SetActive(false);
+        Camera_2.SetActive(true);
+       }
          
-        
-
-       
-            
-
-        
-    
     }
 
-
+     
 }

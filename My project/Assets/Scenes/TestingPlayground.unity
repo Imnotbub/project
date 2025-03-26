@@ -706,7 +706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a921dc59b8d0beb448f86ce0849da40c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launchSpeed: 75
+  launchSpeed: 35
   objectPrefab: {fileID: 3137951421362732027, guid: 74fa8483dbeacb04ab68cc5ad8b06fe6, type: 3}
 --- !u!1 &206318851
 GameObject:
@@ -3607,6 +3607,7 @@ GameObject:
   - component: {fileID: 1575241694}
   - component: {fileID: 1575241693}
   - component: {fileID: 1575241698}
+  - component: {fileID: 1575241700}
   m_Layer: 0
   m_Name: FreeLook Camera
   m_TagString: Untagged
@@ -3868,6 +3869,20 @@ MonoBehaviour:
       Wait: 1
       Time: 2
     Restrictions: 0
+--- !u!114 &1575241700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575241691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 328cd5eee3b917d42adfa3d6d8225f20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Camera_2: {fileID: 98319654}
+  Camera_1: {fileID: 1705933084}
 --- !u!1001 &1584262667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4269,7 +4284,6 @@ GameObject:
   - component: {fileID: 1705933088}
   - component: {fileID: 1705933087}
   - component: {fileID: 1705933086}
-  - component: {fileID: 1705933090}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -4427,20 +4441,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &1705933090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1705933084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 328cd5eee3b917d42adfa3d6d8225f20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Scope: {fileID: 1803774558}
-  MainCamera: {fileID: 1705933084}
 --- !u!1001 &1744192012
 PrefabInstance:
   m_ObjectHideFlags: 0
