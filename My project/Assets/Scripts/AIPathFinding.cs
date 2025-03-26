@@ -109,7 +109,7 @@ private void SearchWalkPoint()
         Destroy(gameObject);
     }
 
-    private void ODrawGizmosSelected()
+    private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange);
