@@ -1,31 +1,52 @@
+using System;
 using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public float health = 150f;
-    public GameObject Bullet;
-    
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+   [SerializeField] private float maxHealth;
+
+   public GameObject player;
+
+   private float currentHealth;
+
+   public HealthBar healthbar;
+
+   
+
+   private void Start()
     {
-        
+         if (maxHealth <= 0)
+        {
+             Debug.LogError("maxHealth is not set or is <= 0. Assign a proper value in the Inspector.");
+            maxHealth = 100; // Assign a default value to prevent issues
+        }
+
+        currentHealth = maxHealth;
+         healthbar.SetSliderMax(maxHealth);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TakeDamage(float amount)
     {
-        
+        currentHealth -= amount;
+        healthbar.SetSlider(currentHealth);
     }
 
-    void TakeDamage(int damage)
+    private void Update()
     {
-        health -=25f;
-        if(health <= 0.1f) Invoke(nameof(DestroyPlayer), 0.5f);
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+
+        if (currentHealth <= 1)
+        {
+            Die();
+        }
     }
 
-    void DestroyPlayer()
+     void Die()
     {
-        Destroy(gameObject);
+        Destroy(player);
+        Debug.Log("Player died.");
     }
 }
