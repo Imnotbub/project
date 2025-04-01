@@ -11,6 +11,12 @@ public class Health : MonoBehaviour
 
    public HealthBar healthbar;
 
+   public bool PlayerIsDead;
+
+   public GameObject DeathScreen;
+
+   public GameObject ActiveUI;
+
    
 
    private void Start()
@@ -42,11 +48,21 @@ public class Health : MonoBehaviour
         {
             Die();
         }
+
+        if (PlayerIsDead == true)
+        {
+            DeathScreen.SetActive(true);
+            ActiveUI.SetActive(false);
+
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
 
      void Die()
     {
-        Destroy(player);
+        PlayerIsDead = true;
+        player.SetActive(false);
         Debug.Log("Player died.");
     }
 }
