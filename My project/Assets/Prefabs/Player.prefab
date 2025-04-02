@@ -1025,8 +1025,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0d31b81e36c75e4687a21f606b0b476, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 150
-  Bullet: {fileID: 3137951421362732027, guid: 74fa8483dbeacb04ab68cc5ad8b06fe6, type: 3}
+  maxHealth: 0
+  player: {fileID: 0}
+  healthbar: {fileID: 0}
+  PlayerIsDead: 0
+  DeathScreen: {fileID: 0}
+  ActiveUI: {fileID: 0}
 --- !u!114 &839815340349534058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1875,8 +1879,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 81a819cad2f69fd4ba527deb0918bb3a, type: 2}
-  - {fileID: 2100000, guid: 81a819cad2f69fd4ba527deb0918bb3a, type: 2}
+  - {fileID: 2100000, guid: af860aff0f9305b449a06304f209c7f7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
